@@ -1,0 +1,19 @@
+<h1>Edit</h1>
+
+<form method='post' action='/mage/crud/index/save'>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="hidden" name="post_id" value="<?php echo $block->getEditRecord()->getPostId(); ?>">
+        <input type = "text" class="form-control" id = "name" name = "name"
+               value = "<?php echo $block->getEditRecord()->getName(); ?>">
+
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="post_content">Content</label>
+        <input type="text" class="form-control" id="post_content" name="post_content"
+        value="<?php echo $block->getEditRecord()->getPostContent(); ?>">
+    </div>
+    <br>
+    <button type="submit" class="action primary">Update</button>
+</form>
